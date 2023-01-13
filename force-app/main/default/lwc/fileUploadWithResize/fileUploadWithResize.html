@@ -1,0 +1,23 @@
+<template>
+    <lightning-card>
+        <div class="slds-p-around_small">
+            <lightning-layout multiple-rows>
+                <lightning-layout-item size="12">
+                    <lightning-input type="text"
+                                     label="Account Name"
+                                     name="accountName"
+                                     required
+                                     onchange={handleChangeAccountName}
+                                     value={accountName}
+                                     class="validate"></lightning-input>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+        <!-- file -->
+        <lightning-input type="file" label="File-Upload" onchange={openFileUpload} multiple="false" class="validate"></lightning-input>
+        <div class="wrapper"></div>
+        
+        <!-- save button -->
+        <lightning-button label="Save" onclick={handleCreate}></lightning-button>
+    </lightning-card>
+</template>
