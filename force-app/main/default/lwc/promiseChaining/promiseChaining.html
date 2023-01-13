@@ -1,0 +1,18 @@
+<template>
+    <lightning-card icon-name="action:new_account" title="Create Account">
+        <lightning-spinner if:true={isLoading} alternative-text="Loading"></lightning-spinner>
+        <div slot="actions">
+            <lightning-button class="slds-m-top_small" onclick={handleCreate} label="Create">
+            </lightning-button>
+        </div>
+        <div class="slds-p-around_small">
+            <lightning-layout multiple-rows>
+                <lightning-layout-item size="12">
+                    <lightning-input type="text" label="Account Name" name="accountName" required
+                        onchange={handleChange} value={accountName}></lightning-input>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+    
+    </lightning-card>
+</template>
